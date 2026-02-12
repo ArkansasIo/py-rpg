@@ -1,0 +1,11 @@
+{
+  "Warrior": ["Strength", "Vitality", "Armor", "Crit Chance", "Attack Speed"],
+  "Mage": ["Intelligence", "Mana", "Spell Power", "Cast Speed", "Elemental Mastery"],
+  "Rogue": ["Dexterity", "Crit Chance", "Evasion", "Attack Speed", "Accuracy"],
+  "Cleric": ["Wisdom", "Spirit", "Healing Power", "HP", "Mana"],
+  "Ranger": ["Dexterity", "Accuracy", "Crit Chance", "Attack Speed", "Move Speed"],
+  "Paladin": ["Strength", "Wisdom", "Armor", "Block Chance", "Healing Power"],
+  "Monk": ["Dexterity", "Willpower", "Attack Speed", "Evasion", "HP"],
+  "Druid": ["Wisdom", "Intelligence", "Elemental Mastery", "HP", "Mana"],
+  "Artificer": ["Intelligence", "Dexterity", "Spell Power", "Mana", "Attack Speed"]
+}

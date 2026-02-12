@@ -1,0 +1,12 @@
+{
+  "world": {
+    "zones": [
+      {"name": "Eldergrove", "subzones": ["Whispering Woods", "Fey Glade", "Ancient Roots"]},
+      {"name": "Ashen Peaks", "subzones": ["Molten Pass", "Cinder Summit", "Obsidian Depths"]},
+      {"name": "Frostveil", "subzones": ["Icelorn Tundra", "Glacial Rift", "Frostspire"]},
+      {"name": "Sunken Expanse", "subzones": ["Drowned Ruins", "Coral Forest", "Abyssal Trench"]},
+      {"name": "Chrono Nexus", "subzones": ["Temporal Plaza", "Paradox Spire", "Eternal Loop"]}
+      // ... (Add 72+ zones and subzones for full system)
+    ]
+  }
+}

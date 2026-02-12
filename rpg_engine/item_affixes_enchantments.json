@@ -1,0 +1,9 @@
+[
+  {"name": "Flaming", "effect": "+12 Fire Damage", "type": "prefix"},
+  {"name": "Vampiric", "effect": "5% of damage dealt heals you", "type": "prefix"},
+  {"name": "of the Titan", "effect": "+8% Strength", "type": "suffix"},
+  {"name": "of the Duelist", "effect": "+6% Crit Chance", "type": "suffix"},
+  {"name": "Frostforged", "effect": "+15 Ice Damage", "type": "prefix"},
+  {"name": "of the Archmage", "effect": "+10% Spell Power", "type": "suffix"}
+  // ... (Add more for full system)
+]

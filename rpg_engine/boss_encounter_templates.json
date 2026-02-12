@@ -1,0 +1,31 @@
+[
+  {
+    "name": "Chrono Hydra",
+    "rank": "Raid Boss",
+    "level": 70,
+    "hp": 2500000,
+    "phases": ["Time Distortion", "Temporal Rage", "Paradox Collapse"],
+    "abilities": ["Time Eater", "Rewind", "Chrono Breath", "Paradox Nova"],
+    "immunities": ["Stun", "Freeze", "Silence"],
+    "affixes": ["Enraged", "Temporal Shield"],
+    "loot_table": ["Celestial Greatsword", "Abyssal Plate", "Chrono Relic"],
+    "enrage_timer": 600,
+    "ai_profile": "Brute-Caster Hybrid",
+    "arena_rules": {"time_limit": 600, "no_resurrection": true}
+  },
+  {
+    "name": "Ashen Warlord",
+    "rank": "Dungeon Boss",
+    "level": 55,
+    "hp": 600000,
+    "phases": ["Ashen Onslaught", "Molten Core"],
+    "abilities": ["Flame Cleave", "Molten Armor", "Ashen Roar"],
+    "immunities": ["Fear", "Charm"],
+    "affixes": ["Berserk", "Molten Skin"],
+    "loot_table": ["Ashen Blade", "Stormcaller's Band"],
+    "enrage_timer": 300,
+    "ai_profile": "Brute-Tank",
+    "arena_rules": {"lava_pools": true}
+  }
+  // ... (Add 50+ more for full system)
+]

@@ -70,12 +70,12 @@ class RPGGUI(tk.Tk):
             ("Options", OptionsPanel),
             ("Shop", ShopPanel)
         ]
+        self.content_frame = ttk.Frame(self)
+        self.content_frame.pack(side="left", fill="both", expand=True, padx=10, pady=10)
         self.panels = {}
         for btn, panel_cls in nav_buttons:
             ttk.Button(nav_frame, text=btn, command=lambda b=btn: self.show_panel(b)).pack(fill="x", pady=2)
             self.panels[btn] = panel_cls(self.content_frame)
-        self.content_frame = ttk.Frame(self)
-        self.content_frame.pack(side="left", fill="both", expand=True, padx=10, pady=10)
         self.show_panel("Character")
 
     # No longer needed: create_panel

@@ -1,0 +1,20 @@
+{
+  "classes": [
+    {"name": "Warrior", "archetypes": ["Berserker", "Defender", "Warlord"]},
+    {"name": "Mage", "archetypes": ["Elementalist", "Chronomancer", "Necromancer"]},
+    {"name": "Rogue", "archetypes": ["Assassin", "Trickster", "Shadowblade"]},
+    {"name": "Cleric", "archetypes": ["Priest", "Inquisitor", "Oracle"]},
+    {"name": "Ranger", "archetypes": ["Beastmaster", "Sniper", "Warden"]},
+    {"name": "Paladin", "archetypes": ["Crusader", "Templar", "Justicar"]},
+    {"name": "Monk", "archetypes": ["Mystic", "Brawler", "Ascendant"]},
+    {"name": "Druid", "archetypes": ["Shapeshifter", "Stormcaller", "Lifebinder"]},
+    {"name": "Artificer", "archetypes": ["Machinist", "Alchemist", "Runesmith"]}
+  ],
+  "races": [
+    {"name": "Human", "subraces": ["Highlander", "Lowlander"]},
+    {"name": "Elf", "subraces": ["High Elf", "Wood Elf", "Dark Elf"]},
+    {"name": "Dwarf", "subraces": ["Mountain Dwarf", "Deep Dwarf"]},
+    {"name": "Orc", "subraces": ["Iron Orc", "Frost Orc"]},
+    {"name": "Dragonkin", "subraces": ["Fireborn", "Frostborn", "Stormborn"]}
+  ]
+}

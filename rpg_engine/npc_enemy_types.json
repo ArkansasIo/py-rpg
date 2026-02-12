@@ -1,0 +1,8 @@
+[
+  {"name": "Goblin Raider", "type": "Trash Mob", "level_range": [1, 10], "ai": "Brute", "abilities": ["Slash", "Frenzy"], "loot": ["Copper Coin", "Rusty Dagger"]},
+  {"name": "Frost Wyrm", "type": "Elite", "level_range": [30, 40], "ai": "Caster", "abilities": ["Frost Breath", "Tail Swipe"], "loot": ["Frostforged Scale", "Ice Crystal"]},
+  {"name": "Shadow Assassin", "type": "Veteran", "level_range": [20, 35], "ai": "Assassin", "abilities": ["Backstab", "Vanish"], "loot": ["Dagger", "Smoke Bomb"]},
+  {"name": "Ancient Golem", "type": "Champion", "level_range": [40, 60], "ai": "Tank", "abilities": ["Ground Slam", "Stone Skin"], "loot": ["Golem Core", "Stone Plate"]},
+  {"name": "Void Herald", "type": "Dungeon Boss", "level_range": [50, 70], "ai": "Summoner", "abilities": ["Void Rift", "Summon Minions"], "loot": ["Void Essence", "Herald's Mantle"]}
+  // ... (Add 100+ more for full system)
+]

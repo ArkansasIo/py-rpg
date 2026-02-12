@@ -1,14 +1,14 @@
+
 import tkinter as tk
 from tkinter import ttk
+from inventory_equipment_panel import InventoryEquipmentPanel
 
 class InventoryPanel(ttk.Frame):
     def __init__(self, parent):
         super().__init__(parent)
-        ttk.Label(self, text="Inventory").pack(anchor="nw")
-        # Inventory grid placeholder
-        for row in range(5):
-            for col in range(8):
-                ttk.Label(self, text="[ ]", relief="groove", width=4).grid(row=row, column=col, padx=2, pady=2)
-        # Filters and tooltips placeholder
-        ttk.Label(self, text="[Filters]").pack(anchor="sw")
-        ttk.Label(self, text="[Tooltip]").pack(anchor="sw")
+        tabs = ttk.Notebook(self)
+        tabs.pack(fill="both", expand=True)
+        # Equipment tab
+        equip_tab = InventoryEquipmentPanel(tabs)
+        tabs.add(equip_tab, text="Equipment")
+        # Placeholder for more subpages (consumables, crafting, quest items, cosmetics)

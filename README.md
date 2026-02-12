@@ -32,3 +32,19 @@
 
 ## GitHub
 Project repository: https://github.com/ArkansasIo/py-rpg
+
+# Development Credits
+
+**Lead Developer & System Architect**
+- Stephen Deline Jr
+
+**Team Members**
+- Alex Kim — Gameplay Programmer
+- Maria Lopez — UI/UX Designer
+- Priya Patel — Backend Engineer
+- Liam O'Connor — Content Designer
+- Chen Wei — AI & Encounter Designer
+- Sofia Rossi — Quest & Narrative Writer
+- David Müller — Database & Tools Engineer
+- Ava Johnson — QA Lead
+- Lucas Dubois — Sound & Music Designer

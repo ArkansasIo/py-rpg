@@ -1,15 +1,19 @@
+
 import tkinter as tk
 from tkinter import ttk
+from character_attributes_panel import CharacterAttributesPanel
+from character_biography_panel import CharacterBiographyPanel
 
 class CharacterPanel(ttk.Frame):
     def __init__(self, parent):
         super().__init__(parent)
-        ttk.Label(self, text="Character Sheet").pack(anchor="nw")
-        # Stats
-        stats = ["Strength", "Dexterity", "Vitality", "Intelligence", "Luck"]
-        for stat in stats:
-            ttk.Label(self, text=f"{stat}: 10").pack(anchor="nw")
-        # Equipment slots
-        ttk.Label(self, text="[Equipment Slots]").pack(anchor="nw")
-        # Appearance placeholder
+        tabs = ttk.Notebook(self)
+        tabs.pack(fill="both", expand=True)
+        # Attributes tab
+        attr_tab = CharacterAttributesPanel(tabs)
+        tabs.add(attr_tab, text="Attributes")
+        # Biography tab
+        bio_tab = CharacterBiographyPanel(tabs)
+        tabs.add(bio_tab, text="Biography")
+        # Placeholder for more subpages (reputation, appearance, mounts, pets)
         ttk.Label(self, text="[Character Portrait]").pack(anchor="nw")

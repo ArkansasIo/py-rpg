@@ -1,0 +1,12 @@
+[
+  {"name": "Stephen Deline Jr", "role": "Lead Developer, System Architect, Game Designer"},
+  {"name": "Alex Kim", "role": "Gameplay Programmer"},
+  {"name": "Maria Lopez", "role": "UI/UX Designer"},
+  {"name": "Priya Patel", "role": "Backend Engineer"},
+  {"name": "Liam O'Connor", "role": "Content Designer"},
+  {"name": "Chen Wei", "role": "AI & Encounter Designer"},
+  {"name": "Sofia Rossi", "role": "Quest & Narrative Writer"},
+  {"name": "David Müller", "role": "Database & Tools Engineer"},
+  {"name": "Ava Johnson", "role": "QA Lead"},
+  {"name": "Lucas Dubois", "role": "Sound & Music Designer"}
+]

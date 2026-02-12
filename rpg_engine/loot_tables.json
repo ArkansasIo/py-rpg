@@ -1,0 +1,13 @@
+{
+  "Celestial Greatsword": [
+    {"boss": "Chrono Hydra", "drop_rate": 0.03},
+    {"boss": "Ashen Warlord", "drop_rate": 0.01}
+  ],
+  "Abyssal Plate": [
+    {"boss": "Chrono Hydra", "drop_rate": 0.04}
+  ],
+  "Stormcaller's Band": [
+    {"boss": "Ashen Warlord", "drop_rate": 0.07}
+  ]
+  // ... (Add more for full system)
+}

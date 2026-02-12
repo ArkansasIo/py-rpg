@@ -1,0 +1,12 @@
+[
+  {"name": "Undead", "types": ["Skeleton", "Zombie", "Lich", "Wraith"]},
+  {"name": "Beast", "types": ["Wolf", "Bear", "Dire Boar", "Chimera"]},
+  {"name": "Dragon", "types": ["Wyrmling", "Adult Dragon", "Ancient Dragon"]},
+  {"name": "Construct", "types": ["Golem", "Automaton", "Sentinel"]},
+  {"name": "Demon", "types": ["Imp", "Fiend", "Archdemon"]},
+  {"name": "Elemental", "types": ["Fire Elemental", "Ice Elemental", "Storm Elemental"]},
+  {"name": "Fey", "types": ["Sprite", "Dryad", "Satyr"]},
+  {"name": "Giant", "types": ["Hill Giant", "Frost Giant", "Storm Giant"]},
+  {"name": "Aberration", "types": ["Mindflayer", "Beholder", "Aboleth"]}
+  // ... (Add more for full system)
+]

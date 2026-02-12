@@ -1,0 +1,6 @@
+[
+  {"name": "Tower of Eternity", "type": "Raid", "level": 70, "bosses": ["Chrono Hydra", "Eternal Watcher"], "rewards": ["Celestial Greatsword", "Chrono Relic"]},
+  {"name": "Ashen Crucible", "type": "Dungeon", "level": 55, "bosses": ["Ashen Warlord", "Molten Colossus"], "rewards": ["Ashen Blade", "Abyssal Plate"]},
+  {"name": "Trial of Shadows", "type": "Trial", "level": 40, "bosses": ["Shadow Assassin", "Nightmare Shade"], "rewards": ["Shadow Mantle", "Dagger of Night"]}
+  // ... (Add 30+ dungeons, 10+ raids, 20+ trials for full system)
+]

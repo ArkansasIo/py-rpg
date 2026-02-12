@@ -1,0 +1,19 @@
+{
+  "acts": [
+    {
+      "name": "Act I: Dawn of Paradox",
+      "chapters": [
+        {"name": "Chapter 1: The Shattered Sigil", "quests": ["Awakening", "Lost Relics", "First Blood"]},
+        {"name": "Chapter 2: Echoes of Fate", "quests": ["Echo Hunt", "Temporal Rift", "The Watchers"]}
+      ]
+    },
+    {
+      "name": "Act II: The Fractured Realms",
+      "chapters": [
+        {"name": "Chapter 1: The Sundering", "quests": ["Broken Bonds", "Into the Wilds"]},
+        {"name": "Chapter 2: The Iron Pact", "quests": ["Forged in War", "Siege of Hope"]}
+      ]
+    }
+    // ... (Add 5 acts, 50+ chapters, 200+ quests for full system)
+  ]
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Celestial Greatsword",
+    "type": "Weapon",
+    "slot": "Main Hand",
+    "rarity": "Legendary",
+    "pve_stats": {"attack": 1800, "light_damage": 40, "crit_chance": 8, "boss_damage": 15, "proc": "Smite on crit"},
+    "pvp_stats": {"attack": 900, "pvp_power": 18, "anti_heal": 25, "smite_cap": true},
+    "set_bonus": {"2pc": "+5% Light Damage", "4pc": "+10% Crit Chance"},
+    "enchantments": ["Holy Edge", "Quickening"],
+    "required_level": 50,
+    "bind_rules": "Soulbound",
+    "cosmetic": {"glow": "golden"}
+  },
+  {
+    "name": "Abyssal Plate",
+    "type": "Armor",
+    "slot": "Chest",
+    "rarity": "Mythic",
+    "pve_stats": {"armor": 2200, "dark_resist": 30, "hp": 1200, "damage_reduction": 12},
+    "pvp_stats": {"armor": 1100, "pvp_resist": 20, "hp": 600, "damage_reduction": 7},
+    "set_bonus": {"2pc": "+8% Dark Resist", "4pc": "+10% HP"},
+    "enchantments": ["Shadow Ward"],
+    "required_level": 55,
+    "bind_rules": "Account Bound",
+    "cosmetic": {"aura": "shadow"}
+  },
+  {
+    "name": "Stormcaller's Band",
+    "type": "Accessory",
+    "slot": "Ring",
+    "rarity": "Epic",
+    "pve_stats": {"crit_chance": 4, "lightning_damage": 18, "cast_speed": 6},
+    "pvp_stats": {"crit_chance": 2, "pvp_power": 6},
+    "set_bonus": {},
+    "enchantments": ["Static Charge"],
+    "required_level": 48,
+    "bind_rules": "Tradeable",
+    "cosmetic": {"sparkle": true}
+  }
+  // ... (Add 100+ more for full system)
+]
