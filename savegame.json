@@ -1,0 +1,1 @@
+{"name": "Hero", "class": "Warrior", "inventory": ["Sword", "Potion"], "stats": {"hp": 100, "mp": 50, "strength": 10, "agility": 10}, "quests": [{"title": "Find the Lost Sword", "description": "Retrieve the sword from the dungeon.", "completed": false}], "location": "Town"}

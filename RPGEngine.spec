@@ -2,7 +2,7 @@
 
 
 a = Analysis(
-    ['main_api.py'],
+    ['main_game.py'],
     pathex=[],
     binaries=[],
     datas=[],
@@ -35,4 +35,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
+    icon=['game_icon.ico'],
 )
