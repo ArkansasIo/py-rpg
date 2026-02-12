@@ -1,17 +1,34 @@
 
-# PHP API & Frontend Example
 
-## Structure
-- backend/api.php: Simple PHP API endpoint
-- backend/setup.sql: MySQL setup script
-- frontend/index.php: Frontend PHP page fetching API data
+# Eternal Horizons RPG/MMORPG Engine
 
-## Setup
-1. Import backend/setup.sql into your MySQL server.
-2. Update backend/api.php with your MySQL credentials if needed.
-3. Serve both backend and frontend folders with a PHP server (e.g., XAMPP, WAMP).
-4. Open frontend/index.php in your browser.
+## Features
+- Character creation & stats
+- Inventory & equipment
+- Skills & abilities
+- Quests & achievements
+- Guilds, parties, chat
+- Map & exploration
+- PvP, trading, world events
+- Dynamic GUI (Tkinter)
 
-## Notes
-- API returns JSON list of items from MySQL.
-- Frontend fetches and displays items using JavaScript.
+## Data & Config Files
+- `rpg_features_list.md` — List of all RPG/MMORPG features
+- `rpg_database_schema.sql` — Example SQL schema for all game data
+- `rpg_database_example.json` — Example JSON database (characters, items, skills, etc.)
+- `rpg_config.json` — Game/server config
+
+## Running the GUI
+1. Make sure you have Python 3.x installed.
+2. Run:
+	```sh
+	python gui_api/gui.py
+	```
+3. The GUI will load data from the JSON files and display character/inventory info.
+
+## Customization
+- Edit the JSON files to add more characters, items, quests, etc.
+- Expand the GUI or backend logic as needed for your game.
+
+## GitHub
+Project repository: https://github.com/ArkansasIo/py-rpg

@@ -1,0 +1,11 @@
+{
+  "game_name": "Eternal Horizons",
+  "max_players": 1000,
+  "starting_gold": 100,
+  "xp_curve": "linear",
+  "enable_pvp": true,
+  "enable_guilds": true,
+  "enable_trading": true,
+  "server_ip": "127.0.0.1",
+  "server_port": 4000
+}

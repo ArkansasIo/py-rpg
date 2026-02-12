@@ -1,0 +1,31 @@
+{
+  "characters": [
+    {"id": 1, "name": "Hero", "level": 5, "exp": 1200, "str": 15, "dex": 12, "vit": 14, "class": "Warrior", "guild_id": 1}
+  ],
+  "items": [
+    {"id": 1, "name": "Sword of Dawn", "type": "Weapon", "rarity": "Rare", "stats": {"str": 5}},
+    {"id": 2, "name": "Healing Potion", "type": "Consumable", "rarity": "Common", "stats": {}}
+  ],
+  "inventory": [
+    {"character_id": 1, "item_id": 1, "quantity": 1, "equipped": true},
+    {"character_id": 1, "item_id": 2, "quantity": 5, "equipped": false}
+  ],
+  "skills": [
+    {"id": 1, "name": "Slash", "description": "A quick attack.", "power": 10, "cost": 5}
+  ],
+  "quests": [
+    {"id": 1, "name": "Defeat the Goblin King", "description": "Slay the Goblin King in the forest.", "status": "active"}
+  ],
+  "guilds": [
+    {"id": 1, "name": "Knights of Dawn", "leader_id": 1}
+  ],
+  "parties": [
+    {"id": 1, "leader_id": 1}
+  ],
+  "party_members": [
+    {"party_id": 1, "character_id": 1}
+  ],
+  "chat": [
+    {"id": 1, "sender_id": 1, "message": "Hello, world!", "timestamp": "2026-02-12T12:00:00"}
+  ]
+}

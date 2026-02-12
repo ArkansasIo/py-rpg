@@ -1,6 +1,6 @@
-import tkinter as tk
-from tkinter import ttk
-from tkinter import font
+# ...existing code...
+import json
+import os
 
 # Placeholder for custom font and icon support
 try:
@@ -9,6 +9,21 @@ except:
     custom_font = ("Arial", 10, "bold")
 
 class RPGGUI(tk.Tk):
+
+    def load_data(self):
+        # Load config and database
+        base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        try:
+            with open(os.path.join(base, "rpg_config.json"), "r", encoding="utf-8") as f:
+                self.config_data = json.load(f)
+        except Exception:
+            self.config_data = {}
+        try:
+            with open(os.path.join(base, "rpg_database_example.json"), "r", encoding="utf-8") as f:
+                self.db = json.load(f)
+        except Exception:
+            self.db = {}
+
     def __init__(self):
         super().__init__()
         self.title("Eternal Horizons RPG GUI")
@@ -20,6 +35,7 @@ class RPGGUI(tk.Tk):
         self.style.configure("TLabel", background="#232323", foreground="#e0e0e0", font=custom_font)
         self.style.configure("TButton", background="#444", foreground="#e0e0e0", font=custom_font)
 
+        self.load_data()
         self.create_main_layout()
 
     def create_main_layout(self):
@@ -78,6 +94,8 @@ class RPGGUI(tk.Tk):
 
     # Panel implementations
     def character_panel(self, panel):
+        # Use first character from db
+        char = self.db.get("characters", [{}])[0]
         # Tabbed sections for Character
         tabs = ttk.Notebook(panel)
         tabs.pack(fill="both", expand=True)
@@ -85,20 +103,24 @@ class RPGGUI(tk.Tk):
         # Stats Tab
         stats_tab = ttk.Frame(tabs)
         tabs.add(stats_tab, text="Stats")
-        ttk.Label(stats_tab, text="Level: 1 Hero", font=custom_font).pack(anchor="nw")
-        stats = {"Strength": 12, "Dexterity": 12, "Stamina": 12, "NP": 17, "VIT": 12}
+        ttk.Label(stats_tab, text=f"Level: {char.get('level', 1)} {char.get('name', 'Hero')}", font=custom_font).pack(anchor="nw")
+        stats = {"Strength": char.get("str", 0), "Dexterity": char.get("dex", 0), "Vitality": char.get("vit", 0)}
         for stat, value in stats.items():
             ttk.Label(stats_tab, text=f"{stat}: {value}").pack(anchor="nw")
 
         # Equipment Tab
         equip_tab = ttk.Frame(tabs)
         tabs.add(equip_tab, text="Equipment")
-        equipment = ["Helmet", "Plate Armor", "Boots", "Sword"]
+        inv = self.db.get("inventory", [])
+        items = self.db.get("items", [])
+        equipped = [i for i in inv if i.get("character_id") == char.get("id") and i.get("equipped")]
         ttk.Label(equip_tab, text="Equipped Items:", font=custom_font).pack(anchor="nw")
-        for item in equipment:
-            ttk.Label(equip_tab, text=item).pack(anchor="nw")
+        for eq in equipped:
+            item = next((it for it in items if it["id"] == eq["item_id"]), None)
+            if item:
+                ttk.Label(equip_tab, text=item["name"]).pack(anchor="nw")
 
-        # Resistances Tab
+        # Resistances Tab (placeholder)
         resist_tab = ttk.Frame(tabs)
         tabs.add(resist_tab, text="Resistances")
         resistances = {"Fire": 10, "Ice": 8, "Lightning": 5}
@@ -106,6 +128,9 @@ class RPGGUI(tk.Tk):
             ttk.Label(resist_tab, text=f"{res}: {val}").pack(anchor="nw")
 
     def inventory_panel(self, panel):
+        char = self.db.get("characters", [{}])[0]
+        inv = self.db.get("inventory", [])
+        items = self.db.get("items", [])
         # Tabbed sections for Inventory
         tabs = ttk.Notebook(panel)
         tabs.pack(fill="both", expand=True)
@@ -113,20 +138,23 @@ class RPGGUI(tk.Tk):
         # Items Tab
         items_tab = ttk.Frame(tabs)
         tabs.add(items_tab, text="Items")
-        items = ["Sword (+2 Strength)", "Helmet", "Plate Armor", "Boots", "Potion", "Gemstone"]
         ttk.Label(items_tab, text="Inventory Items:", font=custom_font).pack(anchor="nw")
         item_grid = ttk.Frame(items_tab)
         item_grid.pack(anchor="nw")
-        for idx, item in enumerate(items):
-            ttk.Label(item_grid, text=item, relief="groove", width=20).grid(row=idx//3, column=idx%3, padx=5, pady=5)
+        char_inv = [i for i in inv if i.get("character_id") == char.get("id")]
+        for idx, inv_item in enumerate(char_inv):
+            item = next((it for it in items if it["id"] == inv_item["item_id"]), None)
+            if item:
+                label = f"{item['name']} x{inv_item['quantity']}"
+                ttk.Label(item_grid, text=label, relief="groove", width=20).grid(row=idx//3, column=idx%3, padx=5, pady=5)
 
-        # Currency Tab
+        # Currency Tab (placeholder)
         currency_tab = ttk.Frame(tabs)
         tabs.add(currency_tab, text="Currency")
         ttk.Label(currency_tab, text="Gold: 257", font=custom_font).pack(anchor="nw")
         ttk.Label(currency_tab, text="Silver: 78").pack(anchor="nw")
 
-        # Parts Tab
+        # Parts Tab (placeholder)
         parts_tab = ttk.Frame(tabs)
         tabs.add(parts_tab, text="Parts")
         parts = ["Relic Fragment", "Ancient Scroll"]
@@ -162,9 +190,17 @@ class RPGGUI(tk.Tk):
 
     def achievements_panel(self, panel):
         ttk.Label(panel, text="Achievements:").pack(anchor="nw")
-        achievements = ["First Blood", "Master Explorer"]
+        achievements = self.db.get("achievements", [])
+        if not achievements:
+            # Fallback to static if not in db
+            achievements = [
+                {"name": "First Blood", "description": "Defeat your first enemy.", "unlocked": True},
+                {"name": "Master Explorer", "description": "Discover all zones.", "unlocked": False}
+            ]
         for ach in achievements:
-            ttk.Label(panel, text=ach).pack(anchor="nw")
+            status = "[Unlocked]" if ach.get("unlocked") else "[Locked]"
+            text = f"{ach.get('name', 'Achievement')}: {ach.get('description', '')} {status}"
+            ttk.Label(panel, text=text).pack(anchor="nw")
 
     def social_panel(self, panel):
         ttk.Label(panel, text="Chat:").pack(anchor="nw")
